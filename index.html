@@ -14,11 +14,15 @@
     --serif:Georgia,"Times New Roman",serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:#4c4c45 transparent}
   body{
     background:var(--bg);color:var(--ink);
     font-family:var(--serif);line-height:1.65;
   }
+  ::-webkit-scrollbar{width:6px;height:6px}
+  ::-webkit-scrollbar-track{background:transparent}
+  ::-webkit-scrollbar-thumb{background:#4c4c45;border-radius:6px}
+  ::-webkit-scrollbar-thumb:hover{background:#63635b}
 
   .wrap{max-width:860px;margin:0 auto;padding:0 40px 72px}
   .name{
