@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nicon-David Milandru</title>
+<style>
+  :root{
+    --bg:#1a1a18;
+    --ink:#eceae3;
+    --soft:#d0cdc5;
+    --muted:#7d7b74;
+    --sans:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+    --serif:Georgia,"Times New Roman",serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:var(--serif);line-height:1.65;
+  }
+
+  .wrap{max-width:860px;margin:0 auto;padding:0 40px 72px}
+  .name{
+    position:sticky;top:0;z-index:20;background:var(--bg);
+    font-size:29px;line-height:1.1;letter-spacing:-.01em;padding:34px 0 34px;
+  }
+
+  .shell{display:flex;gap:44px;align-items:flex-start}
+
+  /* LEFT MENU */
+  .side{
+    min-width:172px;flex-shrink:0;position:sticky;top:100px;
+    display:flex;flex-direction:column;
+  }
+  .side a{
+    position:relative;text-decoration:none;
+    font-family:var(--sans);font-size:12px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--muted);
+    padding:11px 0 11px 28px;transition:color .2s;
+  }
+  .side a::before{
+    content:"";position:absolute;left:0;top:50%;
+    width:15px;height:1px;background:var(--ink);
+    opacity:0;transition:opacity .25s;
+  }
+  .side a:hover{color:var(--soft)}
+  .side a.active{color:var(--ink)}
+  .side a.active::before{opacity:1}
+  .side a:first-child{padding-top:0}
+  .side a:first-child::before{top:10px}
+
+  /* CONTENT */
+  main{flex:1;min-width:0}
+  section{scroll-margin-top:100px;padding-bottom:48px}
+  section:last-child{padding-bottom:0}
+  .eyebrow{
+    font-family:var(--sans);font-size:12px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--muted);margin-bottom:18px;
+  }
+  .lede{font-size:18px;color:var(--soft);line-height:1.6;max-width:54ch}
+
+  .item{padding:14px 0}
+  .item:first-of-type{padding-top:0}
+  .item .when{
+    font-family:var(--sans);font-size:12px;letter-spacing:.05em;
+    color:var(--muted);margin-bottom:5px;
+  }
+  .item h3{font-size:19px;font-weight:400;margin-bottom:3px}
+  .item p{font-size:15px;color:var(--muted)}
+  .hl{list-style:none;margin-top:11px;display:flex;flex-direction:column;gap:6px}
+  .hl li{position:relative;padding-left:18px;font-size:15px;color:var(--soft);line-height:1.5}
+  .hl li::before{content:"—";position:absolute;left:0;color:var(--muted)}
+
+  /* ARCHIVE */
+  .rec{display:grid;grid-template-columns:72px 1fr;gap:22px;padding:12px 0}
+  .rec .yr{font-family:var(--sans);font-size:13px;color:var(--muted);padding-top:2px}
+  .rec .ti{font-size:16px}
+  .rec .by{font-family:var(--sans);font-size:12px;color:var(--muted)}
+
+  a.link{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--muted);padding-bottom:1px}
+  a.link:hover{border-color:var(--ink)}
+
+  /* CONTACT */
+  .crow{display:grid;grid-template-columns:96px 1fr;gap:22px;align-items:baseline;padding:11px 0}
+  .crow .clabel{
+    font-family:var(--sans);font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);
+  }
+  .crow .cval{font-size:17px}
+
+  @media(max-width:640px){
+    .wrap{padding:0 26px 48px}
+    .name{padding:26px 0 26px}
+    .shell{flex-direction:column;gap:0}
+    .side{position:static;flex-direction:row;flex-wrap:wrap;gap:0 4px;min-width:0;margin-bottom:30px}
+    .side a{padding:8px 14px 8px 0}
+    .side a::before{display:none}
+    .rec{grid-template-columns:60px 1fr;gap:16px}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="name">Nicon-David Milandru</div>
+
+  <div class="shell">
+
+    <nav class="side">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#awards">Awards</a>
+      <a href="#projects">Projects</a>
+      <a href="#archive">Archive</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+
+      <section id="about">
+        <p class="eyebrow">About</p>
+        <p class="lede">To be completed.</p>
+      </section>
+
+      <section id="education">
+        <p class="eyebrow">Education</p>
+        <div class="item">
+          <div class="when">2025 — Present</div>
+          <h3>Maastricht University</h3>
+          <p>Bachelor of Science in Computer Science · Maastricht, Netherlands</p>
+        </div>
+        <div class="item">
+          <div class="when">2021 — 2025</div>
+          <h3>Grigore Moisil National College of Computer Science</h3>
+          <p>High school · Mathematics–Computer Science (Intensive) · Brașov, Romania</p>
+          <ul class="hl">
+            <li>Valedictorian, perfect final average 10.00</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="when">2017 — 2021</div>
+          <h3>Grigore Moisil National College of Computer Science</h3>
+          <p>Middle school · Brașov, Romania</p>
+          <ul class="hl">
+            <li>Valedictorian, final average 9.98</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="awards">
+        <p class="eyebrow">Awards</p>
+        <div class="item">
+          <h3>Gold Medal — American Computer Science League</h3>
+          <p>Senior Division Finals · 2nd-highest score worldwide · 2023–24</p>
+          <ul class="hl">
+            <li>Regular season: 1st place, 2nd-highest individual score worldwide</li>
+            <li>Team: 5th worldwide (Grigore Moisil College)</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>Bronze Medal — American Computer Science League</h3>
+          <p>Senior Division Finals · 2024–25</p>
+          <ul class="hl">
+            <li>Regular season: 2nd place, 3rd-highest individual score worldwide</li>
+            <li>Team: 6th worldwide (Grigore Moisil College)</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects">
+        <p class="eyebrow">Projects</p>
+        <p class="lede">To be completed.</p>
+      </section>
+
+      <section id="archive">
+        <p class="eyebrow">Archive</p>
+        <p class="lede">To be completed.</p>
+      </section>
+
+      <section id="contact">
+        <p class="eyebrow">Contact</p>
+        <div class="crow">
+          <span class="clabel">Email</span>
+          <span class="cval"><a class="link" href="mailto:contact@milandru.com">contact@milandru.com</a></span>
+        </div>
+        <div class="crow">
+          <span class="clabel">WhatsApp</span>
+          <span class="cval"><a class="link" href="https://wa.me/31620171307" target="_blank" rel="noopener">+31 6 20171307</a></span>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+</div>
+
+<script>
+  const links=[...document.querySelectorAll('.side a')];
+  const sections=[...document.querySelectorAll('section')];
+  const offset=120;
+  let hold=false;
+  function setActive(id){
+    links.forEach(l=>l.classList.toggle('active', l.getAttribute('href').slice(1)===id));
+  }
+  function spy(){
+    if(hold) return;
+    let current=sections[0].id;
+    for(const s of sections){
+      if(s.getBoundingClientRect().top<=offset) current=s.id;
+    }
+    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-2){
+      current=sections[sections.length-1].id;
+    }
+    setActive(current);
+  }
+  links.forEach(a=>a.addEventListener('click',()=>{
+    hold=true;
+    setActive(a.getAttribute('href').slice(1));
+  }));
+  ['wheel','touchmove','keydown'].forEach(ev=>
+    window.addEventListener(ev,()=>{hold=false;},{passive:true}));
+  window.addEventListener('scroll',spy,{passive:true});
+  window.addEventListener('resize',spy);
+  spy();
+</script>
+
+</body>
+</html>
