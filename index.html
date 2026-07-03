@@ -10,6 +10,7 @@
     --ink:#eceae3;
     --soft:#d0cdc5;
     --muted:#7d7b74;
+    --hair:#2e2e2c;
     --sans:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
     --serif:Georgia,"Times New Roman",serif;
   }
@@ -81,6 +82,45 @@
   .rec .yr{font-family:var(--sans);font-size:13px;color:var(--muted);padding-top:2px}
   .rec .ti{font-size:16px}
   .rec .by{font-family:var(--sans);font-size:12px;color:var(--muted)}
+
+  /* ARCHIVE — dropdowns */
+  .drops{margin-top:22px}
+  .drop summary{
+    list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;
+    padding:13px 0;transition:color .2s;
+  }
+  .drop summary::-webkit-details-marker{display:none}
+  .drop summary:hover .drop-title{color:#fff}
+  .drop-title{font-size:18px}
+  .drop-side{margin-left:auto;display:flex;align-items:center;gap:18px}
+  .drop-meta{font-family:var(--sans);font-size:12px;letter-spacing:.05em;color:var(--muted)}
+  .drop-ic{position:relative;width:13px;height:13px;flex-shrink:0}
+  .drop-ic::before,.drop-ic::after{
+    content:"";position:absolute;background:var(--muted);transition:opacity .2s,transform .2s;
+  }
+  .drop-ic::before{left:0;top:6px;width:13px;height:1px}
+  .drop-ic::after{left:6px;top:0;width:1px;height:13px}
+  .drop[open] .drop-ic::after{opacity:0;transform:rotate(90deg)}
+  .drop-body{padding:4px 0 20px}
+  .drop-cat{font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:16px 0 8px}
+  .drop-cat:first-child{margin-top:4px}
+  .arow{padding:7px 0}
+  .arow .ti{font-size:16px}
+  .arow .by{font-family:var(--sans);font-size:12px;color:var(--muted)}
+
+  /* ARCHIVE — nested category dropdowns */
+  .subdrop summary{
+    list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:10px 0;
+  }
+  .subdrop summary::-webkit-details-marker{display:none}
+  .sub-t{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#9a978e;transition:color .2s}
+  .subdrop summary:hover .sub-t{color:var(--ink)}
+  .drop-ic-sm{position:relative;width:10px;height:10px;margin-left:auto;flex-shrink:0}
+  .drop-ic-sm::before,.drop-ic-sm::after{content:"";position:absolute;background:var(--muted);transition:opacity .2s}
+  .drop-ic-sm::before{left:0;top:4.5px;width:10px;height:1px}
+  .drop-ic-sm::after{left:4.5px;top:0;width:1px;height:10px}
+  .subdrop[open] .drop-ic-sm::after{opacity:0}
+  .sub-body{padding:2px 0 10px}
 
   a.link{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--muted);padding-bottom:1px}
   a.link:hover{border-color:var(--ink)}
@@ -155,6 +195,7 @@
 
       <section id="awards">
         <p class="eyebrow">Awards</p>
+        <p class="lede" style="margin-bottom:26px">My proudest results. The full record is in the <a class="link" href="#archive">Archive</a>.</p>
         <div class="item">
           <h3>Gold Medal — American Computer Science League</h3>
           <p>Senior Division Finals · 2nd-highest score worldwide · 2023–24</p>
@@ -180,8 +221,99 @@
 
       <section id="archive">
         <p class="eyebrow">Archive</p>
-        <p class="lede">A place for everything I've won over the years, from the very beginning to today.</p>
-        <p style="color:var(--muted);font-size:15px;margin-top:14px">To be completed.</p>
+        <p class="lede">A place for everything I've earned over the years, from the very beginning to today.</p>
+
+        <div class="drops">
+          <details class="drop" open>
+            <summary>
+              <span class="drop-title">2024–2025</span>
+              <span class="drop-side"><span class="drop-ic"></span></span>
+            </summary>
+            <div class="drop-body">
+              <details class="subdrop" open>
+                <summary><span class="sub-t">Competitions &amp; Olympiads</span><span class="drop-ic-sm"></span></summary>
+                <div class="sub-body">
+                  <div class="arow"><div class="ti">[Competition result]</div><div class="by">[Organization · placement]</div></div>
+                </div>
+              </details>
+              <details class="subdrop">
+                <summary><span class="sub-t">Certifications &amp; Courses</span><span class="drop-ic-sm"></span></summary>
+                <div class="sub-body">
+                  <div class="arow"><div class="ti">[Certificate name]</div><div class="by">[Issuing provider]</div></div>
+                </div>
+              </details>
+              <details class="subdrop">
+                <summary><span class="sub-t">Diplomas &amp; Recognitions</span><span class="drop-ic-sm"></span></summary>
+                <div class="sub-body">
+                  <div class="arow"><div class="ti">[Diploma / recognition]</div><div class="by">[Issuing organization]</div></div>
+                </div>
+              </details>
+            </div>
+          </details>
+
+          <details class="drop">
+            <summary>
+              <span class="drop-title">2023–2024</span>
+              <span class="drop-side"><span class="drop-ic"></span></span>
+            </summary>
+            <div class="drop-body">
+              <details class="subdrop">
+                <summary><span class="sub-t">Competitions &amp; Olympiads</span><span class="drop-ic-sm"></span></summary>
+                <div class="sub-body">
+                  <div class="arow"><div class="ti">[Competition result]</div><div class="by">[Organization · placement]</div></div>
+                </div>
+              </details>
+              <details class="subdrop">
+                <summary><span class="sub-t">Certifications &amp; Courses</span><span class="drop-ic-sm"></span></summary>
+                <div class="sub-body">
+                  <div class="arow"><div class="ti">[Certificate name]</div><div class="by">[Issuing provider]</div></div>
+                </div>
+              </details>
+            </div>
+          </details>
+
+          <details class="drop">
+            <summary>
+              <span class="drop-title">2022–2023</span>
+              <span class="drop-side"><span class="drop-ic"></span></span>
+            </summary>
+            <div class="drop-body">
+              <details class="subdrop">
+                <summary><span class="sub-t">Competitions &amp; Olympiads</span><span class="drop-ic-sm"></span></summary>
+                <div class="sub-body">
+                  <div class="arow"><div class="ti">[Competition result]</div><div class="by">[Organization · placement]</div></div>
+                </div>
+              </details>
+              <details class="subdrop">
+                <summary><span class="sub-t">Certifications &amp; Courses</span><span class="drop-ic-sm"></span></summary>
+                <div class="sub-body">
+                  <div class="arow"><div class="ti">[Certificate name]</div><div class="by">[Issuing provider]</div></div>
+                </div>
+              </details>
+            </div>
+          </details>
+
+          <details class="drop">
+            <summary>
+              <span class="drop-title">2021–2022</span>
+              <span class="drop-side"><span class="drop-ic"></span></span>
+            </summary>
+            <div class="drop-body">
+              <details class="subdrop">
+                <summary><span class="sub-t">Competitions &amp; Olympiads</span><span class="drop-ic-sm"></span></summary>
+                <div class="sub-body">
+                  <div class="arow"><div class="ti">[Competition result]</div><div class="by">[Organization · placement]</div></div>
+                </div>
+              </details>
+              <details class="subdrop">
+                <summary><span class="sub-t">Diplomas &amp; Recognitions</span><span class="drop-ic-sm"></span></summary>
+                <div class="sub-body">
+                  <div class="arow"><div class="ti">[Diploma / recognition]</div><div class="by">[Issuing organization]</div></div>
+                </div>
+              </details>
+            </div>
+          </details>
+        </div>
       </section>
 
       <section id="contact">
