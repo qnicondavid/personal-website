@@ -94,13 +94,13 @@
   .drop-title{font-size:18px}
   .drop-side{margin-left:auto;display:flex;align-items:center;gap:18px}
   .drop-meta{font-family:var(--sans);font-size:12px;letter-spacing:.05em;color:var(--muted)}
-  .drop-ic{position:relative;width:13px;height:13px;flex-shrink:0}
+  .drop-ic{position:relative;width:10px;height:10px;flex-shrink:0}
   .drop-ic::before,.drop-ic::after{
     content:"";position:absolute;background:var(--muted);transition:opacity .2s,transform .2s;
   }
-  .drop-ic::before{left:0;top:6px;width:13px;height:1px}
-  .drop-ic::after{left:6px;top:0;width:1px;height:13px}
-  .drop[open] .drop-ic::after{opacity:0;transform:rotate(90deg)}
+  .drop-ic::before{left:0;top:4.5px;width:10px;height:1px}
+  .drop-ic::after{left:4.5px;top:0;width:1px;height:10px}
+  .drop[open] > summary .drop-ic::after{opacity:0;transform:rotate(90deg)}
   .drop-body{padding:4px 0 20px}
   .drop-cat{font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:16px 0 8px}
   .drop-cat:first-child{margin-top:4px}
@@ -119,7 +119,7 @@
   .drop-ic-sm::before,.drop-ic-sm::after{content:"";position:absolute;background:var(--muted);transition:opacity .2s}
   .drop-ic-sm::before{left:0;top:4.5px;width:10px;height:1px}
   .drop-ic-sm::after{left:4.5px;top:0;width:1px;height:10px}
-  .subdrop[open] .drop-ic-sm::after{opacity:0}
+  .subdrop[open] > summary .drop-ic-sm::after{opacity:0}
   .sub-body{padding:2px 0 10px}
 
   a.link{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--muted);padding-bottom:1px}
@@ -224,91 +224,41 @@
         <p class="lede">A place for everything I've earned over the years, from the very beginning to today.</p>
 
         <div class="drops">
-          <details class="drop" open>
+          <details class="drop">
             <summary>
-              <span class="drop-title">2024–2025</span>
+              <span class="drop-title">2025–2026</span>
               <span class="drop-side"><span class="drop-ic"></span></span>
             </summary>
             <div class="drop-body">
-              <details class="subdrop" open>
-                <summary><span class="sub-t">Competitions &amp; Olympiads</span><span class="drop-ic-sm"></span></summary>
-                <div class="sub-body">
-                  <div class="arow"><div class="ti">[Competition result]</div><div class="by">[Organization · placement]</div></div>
-                </div>
-              </details>
               <details class="subdrop">
                 <summary><span class="sub-t">Certifications &amp; Courses</span><span class="drop-ic-sm"></span></summary>
                 <div class="sub-body">
-                  <div class="arow"><div class="ti">[Certificate name]</div><div class="by">[Issuing provider]</div></div>
+              <details class="subdrop">
+                <summary><span class="sub-t">Anthropic</span><span class="drop-ic-sm"></span></summary>
+                <div class="sub-body">
+                  <div class="arow"><a class="ti link" href="Archive/2025-2026/certificate-efteg3jy5bi2-1782919929.pdf" target="_blank" rel="noopener">Claude 101</a></div>
                 </div>
               </details>
               <details class="subdrop">
-                <summary><span class="sub-t">Diplomas &amp; Recognitions</span><span class="drop-ic-sm"></span></summary>
+                <summary><span class="sub-t">MathWorks</span><span class="drop-ic-sm"></span></summary>
                 <div class="sub-body">
-                  <div class="arow"><div class="ti">[Diploma / recognition]</div><div class="by">[Issuing organization]</div></div>
-                </div>
-              </details>
-            </div>
-          </details>
-
-          <details class="drop">
-            <summary>
-              <span class="drop-title">2023–2024</span>
-              <span class="drop-side"><span class="drop-ic"></span></span>
-            </summary>
-            <div class="drop-body">
-              <details class="subdrop">
-                <summary><span class="sub-t">Competitions &amp; Olympiads</span><span class="drop-ic-sm"></span></summary>
-                <div class="sub-body">
-                  <div class="arow"><div class="ti">[Competition result]</div><div class="by">[Organization · placement]</div></div>
+                  <div class="arow"><a class="ti link" href="Archive/2025-2026/Course%20Completion%20Certificate%20Introduction%20to%20Linear%20Algebra%20with%20MATLAB.pdf" target="_blank" rel="noopener">Introduction to Linear Algebra with MATLAB</a></div>
+                  <div class="arow"><a class="ti link" href="Archive/2025-2026/Course%20Completion%20Certificate%20MATLAB%20Onramp.pdf" target="_blank" rel="noopener">MATLAB Onramp</a></div>
                 </div>
               </details>
               <details class="subdrop">
-                <summary><span class="sub-t">Certifications &amp; Courses</span><span class="drop-ic-sm"></span></summary>
+                <summary><span class="sub-t">Maastricht University Library</span><span class="drop-ic-sm"></span></summary>
                 <div class="sub-body">
-                  <div class="arow"><div class="ti">[Certificate name]</div><div class="by">[Issuing provider]</div></div>
+                  <div class="arow"><a class="ti link" href="Archive/2025-2026/Certificate%20of%20Completion_%20CA%201.1%20-%20Evaluating%20sources%20at%20a%20surface%20level.pdf" target="_blank" rel="noopener">Evaluating sources at a surface level</a></div>
+                  <div class="arow"><a class="ti link" href="Archive/2025-2026/Certificate%20of%20Completion_%20CC%201.1%20-%20Learning%20about%20citing_%20what%20and%20why_.pdf" target="_blank" rel="noopener">Learning about citing: what and why?</a></div>
+                  <div class="arow"><a class="ti link" href="Archive/2025-2026/Certificate%20of%20Completion_%20CC%201.2%20-%20Knowing%20when%20to%20cite.pdf" target="_blank" rel="noopener">Knowing when to cite</a></div>
+                  <div class="arow"><a class="ti link" href="Archive/2025-2026/Certificate%20of%20Completion_%20CC%202.2%20-%20Understanding%20and%20avoiding%20plagiarism.pdf" target="_blank" rel="noopener">Understanding and avoiding plagiarism</a></div>
+                  <div class="arow"><a class="ti link" href="Archive/2025-2026/Certificate%20of%20Completion_%20RD%201.1%20-Understanding%20your%20reference%20list.pdf" target="_blank" rel="noopener">Understanding your reference list</a></div>
+                  <div class="arow"><a class="ti link" href="Archive/2025-2026/Certificate%20of%20Completion_%20RD%201.2%20-%20Understanding%20different%20types%20of%20sources.pdf" target="_blank" rel="noopener">Understanding different types of sources</a></div>
+                  <div class="arow"><a class="ti link" href="Archive/2025-2026/Certificate%20of%20Completion_%20RD%202.1%20-%20Understanding%20databases%20and%20search%20engines.pdf" target="_blank" rel="noopener">Understanding databases and search engines</a></div>
+                  <div class="arow"><a class="ti link" href="Archive/2025-2026/Certificate%20of%20Completion_%20RD%204.1%20-%20Obtaining%20the%20full%20text%20of%20a%20source.pdf" target="_blank" rel="noopener">Obtaining the full text of a source</a></div>
                 </div>
               </details>
-            </div>
-          </details>
-
-          <details class="drop">
-            <summary>
-              <span class="drop-title">2022–2023</span>
-              <span class="drop-side"><span class="drop-ic"></span></span>
-            </summary>
-            <div class="drop-body">
-              <details class="subdrop">
-                <summary><span class="sub-t">Competitions &amp; Olympiads</span><span class="drop-ic-sm"></span></summary>
-                <div class="sub-body">
-                  <div class="arow"><div class="ti">[Competition result]</div><div class="by">[Organization · placement]</div></div>
-                </div>
-              </details>
-              <details class="subdrop">
-                <summary><span class="sub-t">Certifications &amp; Courses</span><span class="drop-ic-sm"></span></summary>
-                <div class="sub-body">
-                  <div class="arow"><div class="ti">[Certificate name]</div><div class="by">[Issuing provider]</div></div>
-                </div>
-              </details>
-            </div>
-          </details>
-
-          <details class="drop">
-            <summary>
-              <span class="drop-title">2021–2022</span>
-              <span class="drop-side"><span class="drop-ic"></span></span>
-            </summary>
-            <div class="drop-body">
-              <details class="subdrop">
-                <summary><span class="sub-t">Competitions &amp; Olympiads</span><span class="drop-ic-sm"></span></summary>
-                <div class="sub-body">
-                  <div class="arow"><div class="ti">[Competition result]</div><div class="by">[Organization · placement]</div></div>
-                </div>
-              </details>
-              <details class="subdrop">
-                <summary><span class="sub-t">Diplomas &amp; Recognitions</span><span class="drop-ic-sm"></span></summary>
-                <div class="sub-body">
-                  <div class="arow"><div class="ti">[Diploma / recognition]</div><div class="by">[Issuing organization]</div></div>
                 </div>
               </details>
             </div>
@@ -334,6 +284,10 @@
 </div>
 
 <script>
+  if('scrollRestoration' in history) history.scrollRestoration='manual';
+  window.scrollTo(0,0);
+  window.addEventListener('load',()=>window.scrollTo(0,0));
+
   const links=[...document.querySelectorAll('.side a')];
   const sections=[...document.querySelectorAll('section')];
   const offset=120;
